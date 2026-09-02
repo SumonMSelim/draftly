@@ -99,6 +99,7 @@ button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px s
 .source-preview-actions { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--color-border); }
 .source-preview-actions span { color: var(--color-muted); font-size: 12px; }
 .source-preview pre { flex: 1; min-height: 0; margin: 0; padding: 24px; overflow: auto; background: var(--color-surface-muted); color: var(--color-fg); font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.7; }
+.source-preview textarea { flex: 1; min-height: 0; width: 100%; resize: none; box-sizing: border-box; border: 0; outline: 0; padding: 24px; overflow: auto; background: var(--color-surface-muted); color: var(--color-fg); font-family: 'DM Mono', monospace; font-size: 12px; line-height: 1.7; }
 .split-view { gap: 18px; align-items: stretch; }
 .split-view > * { min-width: 0; }
 .split-pane { flex: 1; min-width: 0; }

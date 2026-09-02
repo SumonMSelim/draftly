@@ -117,6 +117,11 @@ export function App() {
     }
   };
 
+  const handleSourceChange = (source: string) => {
+    const result = importDocument(sourceFormat, source);
+    if (result.success && result.document) setContent(result.document);
+  };
+
   return (
     <div className="app-root">
       <div className="app-body">
@@ -194,9 +199,17 @@ export function App() {
               }
               right={
                 sourceFormat === "markdown" ? (
-                  <MarkdownPreview source={sourceOutput} filename={`${title || "document"}.md`} />
+                  <MarkdownPreview
+                    source={sourceOutput}
+                    filename={`${title || "document"}.md`}
+                    onSourceChange={handleSourceChange}
+                  />
                 ) : (
-                  <DokuWikiPreview source={sourceOutput} filename={`${title || "document"}.dokuwiki.txt`} />
+                  <DokuWikiPreview
+                    source={sourceOutput}
+                    filename={`${title || "document"}.dokuwiki.txt`}
+                    onSourceChange={handleSourceChange}
+                  />
                 )
               }
             />

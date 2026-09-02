@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export interface MarkdownPreviewProps {
   source: string;
   filename?: string;
+  onSourceChange?: (source: string) => void;
 }
 
 function downloadText(filename: string, content: string, mimeType: string) {
@@ -15,9 +16,12 @@ function downloadText(filename: string, content: string, mimeType: string) {
   URL.revokeObjectURL(url);
 }
 
-/** Read-only Markdown source viewer with Copy/Download (spec §23). */
-export function MarkdownPreview({ source, filename = "document.md" }: MarkdownPreviewProps) {
+/** Markdown source viewer/editor with Copy/Download (spec §23). */
+export function MarkdownPreview({ source, filename = "document.md", onSourceChange }: MarkdownPreviewProps) {
   const [copyStatus, setCopyStatus] = useState<"idle" | "copied" | "failed">("idle");
+  const [draft, setDraft] = useState(source);
+
+  useEffect(() => setDraft(source), [source]);
 
   const handleCopy = async () => {
     try {
@@ -42,9 +46,21 @@ export function MarkdownPreview({ source, filename = "document.md" }: MarkdownPr
           {copyStatus === "failed" && "Could not access the clipboard."}
         </span>
       </div>
-      <pre>
-        <code>{source}</code>
-      </pre>
+      {onSourceChange ? (
+        <textarea
+          aria-label="Markdown source"
+          value={draft}
+          onChange={(event) => {
+            setDraft(event.target.value);
+            onSourceChange(event.target.value);
+          }}
+          spellCheck={false}
+        />
+      ) : (
+        <pre>
+          <code>{source}</code>
+        </pre>
+      )}
     </div>
   );
 }
