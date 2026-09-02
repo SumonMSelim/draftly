@@ -119,7 +119,10 @@ export function App() {
 
   const handleSourceChange = (source: string) => {
     const result = importDocument(sourceFormat, source);
-    if (result.success && result.document) setContent(result.document);
+    if (result.success && result.document) {
+      setContent(result.document);
+      editor?.commands.setContent(result.document, { emitUpdate: false });
+    }
   };
 
   return (
