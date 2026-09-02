@@ -41,7 +41,7 @@
   .source-format-controls { width: max-content; max-width: 100%; margin-left: 0; padding: 2px 4px; }
   .app-main { width: 100%; min-width: 0; padding: 12px 8px 22px; overflow-x: hidden; }
   .app-main > .split-view-container { height: auto; min-height: 0; }
-  .split-pane-editor > .draftly-editor { height: auto; min-height: 420px; padding: 22px 16px; border-radius: 10px; }
+  .split-pane-editor > .draftly-editor { height: auto; min-height: 420px; overflow: visible; padding: 22px 16px; border-radius: 10px; }
   .ProseMirror { font-size: 15px; }
   .ProseMirror table, .rendered-preview table { min-width: 500px; }
   .ProseMirror th, .ProseMirror td, .rendered-preview th, .rendered-preview td { min-width: 110px; padding: 10px 11px; }
