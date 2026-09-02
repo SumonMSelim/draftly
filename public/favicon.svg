@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Draftly</title>
+  <defs>
+    <linearGradient id="bg" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#3730a3"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <path d="M18 14h12.5C42 14 49 20.8 49 32s-7 18-18.5 18H18V14Zm11.5 29c6.8 0 10.5-3.7 10.5-11s-3.7-11-10.5-11h-3v22h3Z" fill="#fff"/>
+</svg>

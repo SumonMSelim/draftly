@@ -1,0 +1,32 @@
+{
+  "document": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "codeBlock",
+        "attrs": {
+          "language": "bash"
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "sudo iptables -L\nsudo iptables -F"
+          }
+        ]
+      },
+      {
+        "type": "codeBlock",
+        "attrs": {
+          "language": "python"
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "print(\"hello\")"
+          }
+        ]
+      }
+    ]
+  },
+  "warnings": []
+}

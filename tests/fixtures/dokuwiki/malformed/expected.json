@@ -1,0 +1,66 @@
+{
+  "document": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "**"
+          },
+          {
+            "type": "text",
+            "text": "unterminated bold"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "[[unterminated link"
+          }
+        ]
+      },
+      {
+        "type": "unsupportedMarkup",
+        "attrs": {
+          "format": "dokuwiki",
+          "source": "{{someplugin>weird macro syntax}}"
+        }
+      },
+      {
+        "type": "codeBlock",
+        "attrs": {
+          "language": "bash"
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "final unterminated code content"
+          }
+        ]
+      }
+    ]
+  },
+  "warnings": [
+    {
+      "line": 7,
+      "message": "Unterminated <code> block starting at line 7."
+    },
+    {
+      "line": 1,
+      "message": "Unterminated ** (bold) treated as literal text."
+    },
+    {
+      "line": 3,
+      "message": "Unterminated [[ link treated as literal text."
+    },
+    {
+      "line": 5,
+      "message": "Unsupported DokuWiki macro \"{{someplugin>weird macro syntax}}\" preserved as-is."
+    }
+  ]
+}

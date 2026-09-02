@@ -1,0 +1,62 @@
+.app-root { display: flex; flex-direction: column; min-height: 100vh; max-width: 100%; overflow-x: hidden; }
+.app-body { flex: 1; min-width: 0; }
+.app-toolbar-row { overflow-x: hidden; }
+.toolbar { width: 100%; min-width: 0; }
+  .toolbar-row { width: 100%; min-width: 0; }
+.toolbar-source { width: max-content; }
+.split-view-container { display: flex; flex-direction: column; height: 100%; }
+.split-view { display: flex; flex: 1; flex-direction: row; height: 100%; }
+.split-view > * { flex: 1; min-width: 0; overflow: auto; }
+.split-view-tabs { display: flex; gap: 4px; padding: 0 0 16px; }
+.split-view-tabs button[aria-selected='true'] { background: var(--color-accent-soft); border-color: var(--color-accent); color: var(--color-accent-strong); }
+@media (max-width: 900px) {
+  .document-manager { width: 210px; flex-basis: 210px; }
+  .app-header, .app-toolbar-row { padding-left: 18px; padding-right: 18px; }
+  .app-main { padding: 18px 16px 30px; }
+  .split-pane-editor > .draftly-editor { padding: 26px 30px; }
+}
+@media (max-width: 680px) {
+  .privacy-notice { padding: .6rem .85rem; font-size: 11px; }
+  .app-body { display: block; }
+  .document-manager { width: 100%; min-width: 0; padding: 14px 14px 10px; border-right: 0; border-bottom: 1px solid var(--color-border); }
+  .document-manager.is-collapsed { width: auto; min-height: 52px; padding: 14px; }
+  .document-manager.is-collapsed .sidebar-toggle { top: 12px; right: 14px; }
+  .document-manager::before { display: inline-block; margin-bottom: 8px; }
+  .document-manager > .new-document-button { position: absolute; top: 14px; right: 52px; width: auto; }
+  .document-manager ul { flex-direction: row; clear: both; overflow-x: auto; margin-top: 14px; padding-bottom: 2px; }
+  .document-manager li { min-width: 150px; }
+  .autosave-status { display: none; }
+  .app-shell { width: 100%; min-width: 0; min-height: auto; }
+  .app-header { flex-wrap: wrap; min-height: 72px; padding: 12px 14px; }
+  .app-name { margin-right: auto; }
+  .document-title { order: 3; flex-basis: 100%; padding: 6px 0; }
+  .app-header button { padding: .35rem .5rem; }
+  .app-toolbar-row { padding: 8px 14px; }
+  .toolbar-row { align-items: stretch; gap: 8px; min-height: 42px; padding: 4px; }
+  .toolbar-group { flex-wrap: wrap; align-content: flex-start; padding: 2px 4px; }
+  .toolbar-primary { display: grid; grid-template-columns: minmax(0, auto) minmax(0, 1fr); }
+  .toolbar-primary .toolbar-group[aria-label='Text'], .toolbar-primary .toolbar-group[aria-label='Structure'] { min-width: 0; }
+  .toolbar-primary .toolbar-group[aria-label='Structure'] { grid-column: 1 / -1; }
+  .toolbar-secondary .toolbar-group { flex: 1 1 100%; border-right: 0; padding: 2px 4px; }
+  .source-format-controls { width: max-content; max-width: 100%; margin-left: 0; padding: 2px 4px; }
+  .app-main { width: 100%; min-width: 0; padding: 12px 8px 22px; overflow-x: hidden; }
+  .app-main > .split-view-container { height: auto; min-height: 0; }
+  .split-pane-editor > .draftly-editor { height: auto; min-height: 420px; padding: 22px 16px; border-radius: 10px; }
+  .ProseMirror { font-size: 15px; }
+  .ProseMirror table, .rendered-preview table { min-width: 500px; }
+  .ProseMirror th, .ProseMirror td, .rendered-preview th, .rendered-preview td { min-width: 110px; padding: 10px 11px; }
+  .rendered-preview { padding: 26px 22px; border-radius: 10px; }
+  .split-view { flex-direction: column; gap: 26px; }
+  .split-pane-editor, .split-pane-source { flex-basis: auto; width: 100%; }
+  .split-pane { min-width: 0; }
+  .source-preview { max-width: 100%; }
+  .source-preview { min-height: 360px; }
+  .source-preview pre { max-width: 100%; }
+  .app-status-bar { padding: 9px 14px; }
+  .dialog-overlay { padding: 12px; }
+  .dialog { max-height: calc(100vh - 24px); }
+  .dialog-header { padding: 16px 18px 14px; }
+  .dialog-body { padding: 16px 18px 18px; }
+  .dialog-body section button { margin-bottom: 5px; }
+  .dialog-body section button + button { margin-left: 0; }
+}

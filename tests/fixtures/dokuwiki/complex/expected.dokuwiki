@@ -1,0 +1,25 @@
+====== Technical Report ======
+
+This document covers **network security** in Bengali (বাংলা), Dutch (Nederlands), English, and emoji 😀.
+
+  * Firewalls
+  * Encryption
+    * AES
+    * RSA
+
+^ Term ^ Definition ^
+| Firewall | A network security system |
+
+<code bash>
+sudo iptables -L
+</code>
+
+> This is an important note.
+
+----
+
+See [[https://example.com|our website]] for more, and view 
+
+{{diagram.png|Architecture diagram}}
+
+.

@@ -1,0 +1,22 @@
+{
+  "document": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "image",
+        "attrs": {
+          "src": "diagram.png",
+          "alt": "Network diagram"
+        }
+      },
+      {
+        "type": "image",
+        "attrs": {
+          "src": "photo.jpg",
+          "alt": ""
+        }
+      }
+    ]
+  },
+  "warnings": []
+}

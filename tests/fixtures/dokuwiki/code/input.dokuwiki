@@ -1,0 +1,8 @@
+<code bash>
+sudo iptables -L
+sudo iptables -F
+</code>
+
+<code python>
+print("hello")
+</code>
